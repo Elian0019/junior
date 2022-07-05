@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title> PEDIDOS</title>
+		 
+	</head>
+	<body>
+	<h4>CUANTAS PRENDAS: </h4>
+	<input type="text" id="valor1" />
+	<br>
+	<h4>SELECCIONE LA PRENDA DESEADA</h4>
+	<button id="body">Bodys</button><br>
+	<button id="chaqueta">Chaquetas</button><br>
+	<button id="manga">Manga largas</button><br>
+	<button id="crop">Crop Top</button><br>
+	<button id="vestido">Vestidos</button><br>
+	<button id="gamusado">Vestidos Gamusados</button><br>
+	<button id="topcito">Topcitos</button><br>
+	<button id="corta">Multiformas Manga Corta</button><br>
+	<h4>CLICK EN EL 10% DESCUENTO</h4>
+	<button id="calcular">DESCUENTO</button><br>
+	<h4>NUEVO PRECIO BS:</h4>
+	<output id="e"></output><br>
+	<script>
+	let op;
+	document.querySelector('#body').addEventListener('click',()=>{
+	op='body';
+	});
+	document.querySelector('#chaqueta').addEventListener('click',()=>{
+	op='chaqueta';
+	});
+	document.querySelector('#manga').addEventListener('click',()=>{
+	op='manga';
+	});
+	document.querySelector('#crop').addEventListener('click',()=>{
+	op='crop';
+	});
+	document.querySelector('#vestido').addEventListener('click',()=>{
+	op='vestido';
+	});
+	document.querySelector('#gamusado').addEventListener('click',()=>{
+	op='gamusado';
+	});
+	document.querySelector('#topcito').addEventListener('click',()=>{
+	op='topcito';
+	});
+	document.querySelector('#corta').addEventListener('click',()=>{
+	op='corta';
+	});
+	document.querySelector('#calcular').addEventListener('click',()=>{
+	 let a=parseInt (document.querySelector('#valor1').value);
+	 let r;
+	 let e;
+	 let o;
+	 if(op=='body')
+	 {
+		o=130;
+		a=o*a;
+		r=a*10/100;
+		e=a-r;
+	 }
+	 if(op=='chaqueta')
+	 {
+		o=150;
+		a=o*a;
+		r=a*10/100;
+		e=a-r;
+	 }
+	 if(op=='manga')
+	 {
+		o=80;
+		a=o*a;
+		r=a*10/100;
+		e=a-r;
+	 }
+	 if(op=='crop')
+	 {
+		o=100;
+		a=o*a;
+		r=a*10/100;
+		e=a-r;
+	 }
+	 if(op=='vestido')
+	 {
+		o=120;
+		a=o*a;
+		r=a*10/100;
+		e=a-r;
+	 }
+	 if(op=='gamusado')
+	 {
+		o=280;
+		a=o*a;
+		r=a*10/100;
+		e=a-r;
+	 }
+	 if(op=='topcito')
+	 {
+		o=60;
+		a=o*a;
+		r=a*10/100;
+		e=a-r;
+	 }
+	 if(op=='corta')
+	 {
+		o=70;
+		a=o*a;
+		r=a*10/100;
+		e=a-r;
+	 }
+ 
+	 document.querySelector('#e').innerHTML=e;
+	 });
+	</script>
+	</body>
+</html>

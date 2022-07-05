@@ -1,0 +1,20 @@
+h1
+{
+	text-align:center;
+	text-decoration:underline;
+	text-transform:uppercase;
+}
+.center
+{
+	text-align:center;
+}
+table 
+{
+	width: 50%;
+	height: 300px;
+	background-color:yellow;
+}
+#center
+{
+	text-align:center;
+}

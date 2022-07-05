@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title> PEDIDOS</title>
+		 
+	</head>
+	<body>
+	<h4>CUANTAS PRENDAS: </h4>
+	<input type="text" id="valor1"/>
+	<br>
+	<h4>SELECCIONE LA PRENDA DESEADA</h4>
+	<button id="canguros">Canguros</button><br>
+	<button id="chaqueta">Chaquetas jeams</button><br>
+	<button id="tela">Pantalones de tela</button><br>
+	<button id="soleras">Soleras deportivas y Jersey</button><br>
+	<button id="manga">Manga largas</button><br>
+	<button id="pantalon">Pantalones jeams</button><br>
+	<button id="polera">Poleras</button><br>
+	<button id="short">Shorts</button><br>
+	<button id="rompes">Rompe Vientos</button><br>
+	<h4>CLICK EN EL 10% DESCUENTO</h4>
+	<button id="calcular">DESCUENTO</button><br>
+	<h4>NUEVO PRECIO BS:</h4>
+	<output id="e"></output><br>
+	<script>
+	let op;
+	document.querySelector('#canguros').addEventListener('click',()=>{
+	op='canguros';
+	});
+	document.querySelector('#chaqueta').addEventListener('click',()=>{
+	op='chaqueta';
+	});
+	document.querySelector('#tela').addEventListener('click',()=>{
+	op='tela';
+	});
+	document.querySelector('#soleras').addEventListener('click',()=>{
+	op='soleras';
+	});
+	document.querySelector('#manga').addEventListener('click',()=>{
+	op='manga';
+	});
+	document.querySelector('#pantalon').addEventListener('click',()=>{
+	op='pantalon';
+	});
+	document.querySelector('#polera').addEventListener('click',()=>{
+	op='polera';
+	});
+	document.querySelector('#short').addEventListener('click',()=>{
+	op='short';
+	});
+	document.querySelector('#rompes').addEventListener('click',()=>{
+	op='rompes';
+	});
+	document.querySelector('#calcular').addEventListener('click',()=>{
+	 let a=parseInt (document.querySelector('#valor1').value);
+	 let r;
+	 let e;
+	 let o;
+	 if(op=='canguros')
+	 {
+		o=120;
+		a=o*a;
+		r=a*10/100;
+		e=a-r;
+	 }
+	 	 if(op=='chaqueta')
+	 {
+		o=150;
+		a=o*a;
+		r=a*10/100;
+		e=a-r;
+	 }
+	 	 if(op=='tela')
+	 {
+		o=100;
+		a=o*a;
+		r=a*10/100;
+		e=a-r;
+	 }
+	 	 if(op=='soleras')
+	 {
+		o=98;
+		a=o*a;
+		r=a*10/100;
+		e=a-r;
+	 }
+	 	 if(op=='manga')
+	 {
+		o=120;
+		a=o*a;
+		r=a*10/100;
+		e=a-r;
+	 }
+	 	 if(op=='pantalon')
+	 {
+		o=150;
+		a=o*a;
+		r=a*10/100;
+		e=a-r;
+	 }
+	 	 if(op=='polera')
+	 {
+		o=48;
+		a=o*a;
+		r=a*10/100;
+		e=a-r;
+	 }
+	 	 if(op=='short')
+	 {
+		o=120;
+		a=o*a;
+		r=a*10/100;
+		e=a-r;
+	 }
+	 	 if(op=='rompes')
+	 {
+		o=80;
+		a=o*a;
+		r=a*10/100;
+		e=a-r;
+	 }
+	 document.querySelector('#e').innerHTML=e;
+	 });
+	</script>
+	</body>
+</html>
